@@ -1,0 +1,135 @@
+.edit{
+    position: relative;
+    h1{
+        margin: 0 auto;
+        width: max-content;
+    }
+    & > div{
+        @media (max-width: 550px) {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}
+.backBtn{
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    svg{
+        width: 25px;
+        height: 25px;
+    }
+    border: none;
+    background: none;
+    font-size: 27px;
+    @media (max-width: 550px) {
+        position: relative;
+        top: auto;
+        left: auto;
+        align-self: self-start;
+    }
+}
+.form{
+    margin: 0 auto;
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 16px;
+    margin-top: 60px;
+    gap: 20px;
+    &Inputs{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    span{
+        font-size: 27px;
+    }
+    input, textarea{
+        display: block;
+        border-bottom: 1px solid #1C1B1F;
+        border-radius: 10px 10px 0px 0px;
+        background: #ffffff;
+        margin-bottom: 15px;
+        padding: 25px 30px 20px 30px;
+        width: 100%;
+        font-family: inherit;
+        font-size: 20px;
+        &::placeholder{
+            color: #848287;
+            font-size: 20px;
+            letter-spacing: 0.3px;
+            font-family: inherit;
+        }
+    }
+    textarea{
+        resize: none;
+    }
+    &Btns{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        div{
+            display: flex;
+            gap: 10px;
+        }
+        .statusBtn{
+            display: flex;
+            gap: 10px;
+            font-size: 22px;
+            color: #1C1B1F;
+            align-items: center;
+        }
+    }
+    &Submit{
+        &:hover{
+            border-color: #3f863a;
+            background: #3f863a;
+        }
+    }
+}
+
+.tick {
+    //credits: https://codepen.io/AshtonHolgate/pen/ebMKJM
+    width: 25px;
+    height: 25px;
+    &.ticked {
+      .tickBox {
+        background: #3f863a;
+        border: solid 1px #3f863a;
+      }
+      .tickMark{
+        opacity: 1;
+      }
+
+    }
+    &Box {
+      width: calc(100%);
+      height: calc(100%);
+      background: white;
+      border: solid 1px #BFC0C1;    
+      border-radius: 4px;
+      position: relative;
+      transition: 0.5s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &Mark{
+        width: 16px;
+        height: 16px;
+        display: block;
+        opacity: 0;
+        transition: 0.4s;
+    }
+  }
+  
+  
